@@ -10,7 +10,7 @@ public class School {
 
     private List<Teacher> teacher;
     private List<Student> student;
-    private int totalMoneyEarned;
+    private static int totalMoneyEarned;
     private int totalMoneySpent;
 
     /**
@@ -65,15 +65,29 @@ public class School {
         return totalMoneyEarned;
     }
 
-    public void updateTotalMoneyEarned(int MoneyEarned) {
-        this.totalMoneyEarned += MoneyEarned;
+    /**
+     *
+     * @param MoneyEarned updates the money earned in the school.
+     */
+    public static void updateTotalMoneyEarned(int MoneyEarned) {
+        totalMoneyEarned += MoneyEarned;
     }
 
+    /**
+     *
+     * @return total money spent by the school
+     */
     public int getTotalMoneySpent() {
         return totalMoneySpent;
     }
 
-    public void setTotalMoneySpent(int totalMoneySpent) {
-        this.totalMoneySpent = totalMoneySpent;
+    /**
+     * update the money that is spent by a school.
+     * it is the salary given by the school to its teachers.
+     * @param moneySpent money spent by the school
+     */
+    public void updateTotalMoneySpent(int moneySpent) {
+        totalMoneyEarned -= moneySpent;
     }
+
 }
