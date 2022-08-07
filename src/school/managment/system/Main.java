@@ -7,10 +7,13 @@ public class Main {
     public static void main(String[] args) {
         Teacher lizzy = new Teacher(1,"Lizzy",26000);
         Teacher trajko = new Teacher(2,"Trajko",1000000);
+        Teacher branko = new Teacher (2, "Branko", 100000);
 
         List<Teacher> teacherList = new ArrayList<>();
         teacherList.add(lizzy);
         teacherList.add(trajko);
+
+        teacherList.add(branko);
 
         Student davidmonster = new Student(420,"DAVID MONSTER",4);
         Student alicopter = new Student(69, "Ali Cow God", 4);
